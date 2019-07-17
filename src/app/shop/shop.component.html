@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="shop block">
+      <div class="title">
+        shop
+      </div>
+      <div class="form">
+          <div class="form-group">
+              <label>Helmet</label>
+              <select (click)="clickHelmet(idHelmet)" class="form-control" [(ngModel)]="idHelmet">
+                  <option  [value]="undefined"></option>
+                  <option  *ngFor="let helmet of equipment.helmets" [value]="helmet.id">
+                      {{helmet.name}}
+                  </option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label>Glove</label>
+              <select (click)="clickGlove(idGlove)" class="form-control" [(ngModel)]="idGlove">
+                  <option  [value]="undefined"></option>
+                  <option  *ngFor="let glove of equipment.gloves" [value]="glove.id">
+                      {{glove.name}}
+                  </option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label>Chest</label>
+              <select (click)="clickChest(idChest)" class="form-control" [(ngModel)]="idChest">
+                  <option  [value]="undefined"></option>
+                  <option  *ngFor="let chest of equipment.chests" [value]="chest.id">
+                      {{chest.name}}
+                  </option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label>Boots</label>
+              <select (click)="clickBoot(idBoot)" class="form-control" [(ngModel)]="idBoot">
+                  <option  [value]="undefined"></option>
+                  <option  *ngFor="let boot of equipment.boots" [value]="boot.id">
+                      {{boot.name}}
+                  </option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label>Sword</label>
+              <select (click)="clickSword(idSword)" class="form-control" [(ngModel)]="idSword">
+                  <option  [value]="undefined"></option>
+                  <option  *ngFor="let sword of equipment.swords" [value]="sword.id">
+                      {{sword.name}}
+                  </option>
+              </select>
+          </div>
+      </div>
+      <div class="cost">
+        Equiepment cost: {{+useHelmet.price + +useGlove.price + +useChest.price + +useBoot.price + +useSword.price}}
+      </div>
+    </div>
+    <div class="person block">
+     <div class="picture">
+        <span class="picture__person" *ngIf='useHelmet.img == "none"'><img src="{{person.img}}"></span>
+        <span class="picture__person" *ngIf='useHelmet.img != "none"'><img src="{{person.altImg}}"></span> 
+        <span class="absolute picture__helmet" *ngIf='useHelmet.img != "none"'><img src="{{useHelmet.img}}"></span>
+        <span class="absolute picture__chest" *ngIf='useChest.img != "none"'><img src="{{useChest.img}}"></span>
+        <span class="absolute picture__glove" *ngIf='useGlove.img != "none"'><img src="{{useGlove.img}}"></span>
+        <span class="absolute picture__boot" *ngIf='useBoot.img != "none"'><img src="{{useBoot.img}}"></span>
+        <span class="absolute picture__sword" *ngIf='useSword.img != "none"'><img src="{{useSword.img}}"></span>
+      </div>
+      <div class="spec">
+        <div class="spec__title inline">
+          <div class="spec__text">Name:</div>
+          <div class="spec__text">Stats:</div>
+        </div>
+        <div class="spec__value inline">
+            <div class="spec__text">{{person.name}}</div>
+            <div class="spec__text">{{+person.health + +useHelmet.health + +useGlove.health + +useChest.health + +useBoot.health + +useSword.health}} <img class="icon" src="/assets/images/Vector.png"></div>
+            <div class="spec__text">{{+person.armor + +useHelmet.armor + +useGlove.armor + +useChest.armor + +useBoot.armor + +useSword.armor}} <img class="icon" src="/assets/images/Group.png"></div>
+            <div class="spec__text">{{+person.attack + +useHelmet.attack + +useGlove.attack + +useChest.attack + +useBoot.attack + +useSword.attack}} <img class="icon" src="/assets/images/Union.png"></div>
+        </div>
+      </div>
+    </div>
+  </div>

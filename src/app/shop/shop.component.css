@@ -1,0 +1,113 @@
+* {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.container {
+  width: 1024px;
+  height: 768px;
+  margin: auto;
+  background: #1C6565;
+  display: flex;
+  justify-content: center;
+}
+
+.block {
+  width: 370px;
+  height: 551px;
+  margin: auto 15px;
+  background: #F9E88E;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.inline {
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px 20px;
+}
+
+.picture {
+  position: relative;
+}
+
+.picture__helmet {
+  top: 5px;
+  left: 15px;
+}
+
+.picture__chest {
+  top: 85px;
+  left: 20px;
+}
+
+.picture__glove {
+  top: 150px;
+  left: -32px;
+  z-index: 1;
+}
+
+.picture__boot {
+  top: 250px;
+  left: 0px;
+}
+
+.picture__sword {
+  top: 185px;
+  left: -130px;
+  z-index: 0;
+}
+
+.spec__text {
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.title {
+  margin-bottom: 38px;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+select {
+  width: 190px;
+  height: 36px;
+  margin: 10px 0;
+  background: #FFFFFF;
+  border: 1px solid #727272;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.form {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #727272;
+}
+
+.cost {
+  width: 270px;
+  margin-top: 25px;
+  text-align: left;
+}
+
+.form-group {
+  width: 270px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

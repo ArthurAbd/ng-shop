@@ -1,0 +1,66 @@
+.container {
+  width: 1024px;
+  height: 768px;
+  margin: auto;
+  background: #1C6565;
+  display: flex;
+  justify-content: center;
+}
+
+.block {
+  width: 370px;
+  height: 551px;
+  margin: auto 15px;
+  background: #F9E88E;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.picture {
+  position: relative;
+}
+
+.picture__helmet {
+  top: 5px;
+  left: 15px;
+}
+
+.picture__shest {
+  top: 85px;
+  left: 20px;
+}
+
+.picture__cloves {
+  top: 150px;
+  left: -32px;
+  z-index: 1;
+}
+
+.picture__boots {
+  top: 250px;
+  left: 0px;
+}
+
+.picture__sword {
+  top: 185px;
+  left: -130px;
+  z-index: 0;
+}
+
+.title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
